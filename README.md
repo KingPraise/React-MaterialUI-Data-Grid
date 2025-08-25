@@ -26,7 +26,6 @@ This README explains what's included, how to run and extend the project, and rec
 - Basic use of Material-UI components and styling patterns (assumed in the tutorial).
 - How to run, test, and build a React application.
 
-If you used additional libraries (for example `@mui/material`, `@mui/icons-material`, or `@mui/x-data-grid`) they should be in `package.json`. If they are missing, see "Extending the project" below.
 
 ## Quick start — run locally
 
@@ -93,21 +92,6 @@ Edge cases to consider (and which the tutorial exposes):
 - Slow network — add loading states or skeletons.
 - Large lists — consider virtualization or server-side pagination.
 
-## Extending this project (practical suggestions)
-
-- Add Material-UI / MUI: If the demo expects MUI, install the packages:
-
-```bash
-npm install @mui/material @emotion/react @emotion/styled
-# optional: icons and data-grid
-npm install @mui/icons-material @mui/x-data-grid
-```
-
-- Replace the list in `Data.jsx` with MUI's `DataGrid` for built-in sorting, filtering, and pagination.
-- Add PropTypes or TypeScript for stronger contracts.
-- Add unit tests for components (`Data.jsx`, `DataItem.jsx`) and integration tests for toolbar interactions.
-- Improve accessibility: ensure buttons and inputs have accessible labels, and keyboard interactions work.
-
 ## Troubleshooting
 
 - Dev server won't start: check Node version and reinstall node_modules (`rm -rf node_modules package-lock.json && npm install`).
@@ -153,14 +137,4 @@ This repository does not include a license file. If you intend to publish it, ad
 - `src/Data.jsx` demonstrates how items are loaded and rendered — good place to add sorting/filtering.
 - `src/DatagridToolbar.jsx` contains the UI for user actions; wire its callbacks to the parent `Data.jsx`.
 - `src/DataItem.jsx` is the single-item presentation — keep it pure and focused.
-
----
-
-If you'd like, I can:
-
-- Add a short CONTRIBUTING.md and LICENSE file.
-- Add PropTypes or TypeScript typings.
-- Install and wire MUI DataGrid with sample columns and pagination in `Data.jsx`.
-
-Tell me which of those you'd like next and I will implement it.
 
